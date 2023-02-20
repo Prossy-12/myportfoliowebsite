@@ -78,17 +78,17 @@ export const finishes = [
   },
   {
     id: 2,
-    number: "150+",
+    number: "46+",
     itemName: "Satisfied Customers"
   },
   {
     id: 3,
-    number: "669+",
+    number: "10+",
     itemName: "Designed Items"
   },
   {
     id: 4,
-    number: "117+",
+    number: "46+",
     itemName: "Clients Served"
   }
 ]

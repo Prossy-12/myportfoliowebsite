@@ -6,7 +6,6 @@ import { bios } from '../../../Data';
 import portfolio from "../../../assets/portfolio.jpg"
 const About = () => {
 
-
   return (
     <div className="container " id='about'>
       <motion.div
