@@ -48,9 +48,10 @@
             display: flex;
             margin-top: 1rem;
 
-            div {
+            a {
                 margin-right: 1rem;
                 cursor: pointer;
+                color: #000000;
 
                 &:hover {
                     opacity: 0.8;
@@ -105,7 +106,7 @@
             padding: 0.65rem 1rem;
             border-radius: 10px;
             font-size: 0.85rem;
-            width: 4.2rem;
+            width: 8.2rem;
         }
         span {
             text-decoration: none;

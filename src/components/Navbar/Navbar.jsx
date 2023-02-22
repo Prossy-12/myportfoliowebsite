@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Navbar.scss";
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { navLinks } from '../../Data';
 import { socialIcons } from '../../Data';
@@ -57,10 +57,13 @@ const Navbar = () => {
                   })}
               </ul>
               <div className="social_icons" >
-                  {socialIcons.map((socialIcon, index) => {
+                  {socialIcons.map((socialIcon) => {
                   return (
-                      <div key={index}>
-                          {socialIcon}
+                      <div>
+                          <a href={socialIcon.link}>
+                              {socialIcon.icon}
+                          </a>
+                          
                       </div>
                   )
               })}

@@ -1,8 +1,9 @@
-import { useState, React } from 'react';
+import { useState } from 'react';
 import "./Contact.scss";
 import { contacts } from '../../../Data';
 import { socialIcons } from '../../../Data';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -25,25 +26,18 @@ const Contact = () => {
       message
     };
 
-    fetch('https://portifolioapi.stonixgraphics.com/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST',
-      },
-      body: JSON.stringify(data)
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setResponse(data);
+    axios.post('https://portifolioapi.stonixgraphics.com/', data)
+      .then((res) => {
+        setResponse(res.data);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setResponse({ status: "error", message: "Error sending your message, please try again later" });
         setIsLoading(false);
       });
   };
+
   return (
     <div className="container" id="contact">
       <motion.div
@@ -73,11 +67,11 @@ const Contact = () => {
             )
           })}
           <div className="social_icons">
-            {socialIcons.map((socialIcon, index) => {
+            {socialIcons.map((socialIcon) => {
               return (
-                <div key={index} >
-                  {socialIcon}
-                </div>
+                  <a href={socialIcon.link}>
+                    {socialIcon.icon}
+                  </a>
               )
             })}
           </div>
@@ -87,7 +81,6 @@ const Contact = () => {
           whileInView={{ x: [150, 0], opacity: 1 }}
           transition={{ duration: 1 }}
           className="contact_right"
-
         >
           <h3>Get In Touch</h3>
           <form onSubmit={handleSubmit}>
@@ -108,12 +101,7 @@ const Contact = () => {
               className="btn"
               disabled={isLoading}
             >
-              {isLoading && (
-                <svg className="spinner" viewBox="0 0 50 50">
-                  <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5"></circle>
-                </svg>
-              )}
-              <span>{isLoading ? 'Sending...' : 'Send'}</span>
+              <span>{isLoading ? 'Sending' : 'Send'}</span>
             </motion.button>
           </form>
           {response && (
