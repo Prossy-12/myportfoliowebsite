@@ -1,8 +1,5 @@
-import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaSass, FaFigma, FaPhoneAlt, FaUser, FaMapMarkerAlt, FaPaperPlane, FaDribbble, FaInstagram, FaLinkedin, FaPhp, FaLaravel, FaPython, FaVuejs, FaTwitter, FaYoutube, FaFacebook, FaGithub } from "react-icons/fa";
-import { DiJavascript, DiMongodb, DiMysql, DiPhotoshop } from "react-icons/di";
+import {  FaNodeJs, FaReact, FaPhoneAlt, FaUser,FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaTwitter, FaYoutube, FaFacebook, FaGithub } from "react-icons/fa";
 import { SiJavascript, SiTensorflow, SiTypescript } from "react-icons/si";
-import { BsMedium } from "react-icons/bs";
-import portfolio from "./assets/portfolio.jpg"
 import work1 from "./assets/work1.png";
 import work2 from "./assets/work2.png";
 import work3 from "./assets/work3.png";
@@ -13,12 +10,36 @@ import work6 from "./assets/work6.png";
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
 
 export const socialIcons = [
-  <FaTwitter />,
-  <FaInstagram />,
-  <FaLinkedin />,
-  <FaYoutube />,
-  <FaFacebook />,
-  <FaGithub />
+  { id:1,
+    icon: <FaTwitter />,
+    link: "https://twitter.com/KadduLivingston",
+  },
+  {
+    id:2,
+    icon: <FaInstagram />,
+    link: "https://www.instagram.com/kaddulivingstone/",
+  },
+  {
+    id:3,
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/kaddu-livingstone",
+  },
+  {
+    id: 4,
+    icon: <FaYoutube />,
+    link: "https://www.youtube.com/@KadduLivingstone",
+  },
+  {
+    id:5,
+    icon: <FaFacebook />,
+    link: "https://www.facebook.com/kadduLivingstoneofficial",
+  },
+  {
+    id: 6,
+    icon: <FaGithub />,
+    link: "https://github.com/Livingston-k",
+  }
+
 ]
 
 export const bios = [
@@ -32,13 +53,13 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: "Phone",
-    value: "+256701512709"
+    value: "+(256)701512709"
   },
   {
     id: 3,
     icon: <FaPaperPlane />,
     key: "Email",
-    value: "kaddulivingston@gmial.com"
+    value: "kaddulivingston@gmail.com"
   }
 ]
 

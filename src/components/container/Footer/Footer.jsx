@@ -21,11 +21,11 @@ const Footer = () => {
         <h4>Follow Me</h4>
         <div className="stick"></div>
         <div className="social_icons">
-            {socialIcons.map((socialIcon, index) => {
+          {socialIcons.map((socialIcon) => {
             return (
-              <div key={index} >
-                {socialIcon}
-              </div>
+                <a href={socialIcon.link}>
+                  {socialIcon.icon}
+                </a>
             )
           })}
           </div>
