@@ -13,9 +13,52 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!firstName.trim()) {
+      errors.firstName = "Please enter your first name.";
+      isValid = false;
+    }
+
+    if (!lastName.trim()) {
+      errors.lastName = "Please enter your last name.";
+      isValid = false;
+    }
+
+    if (!phone.trim()) {
+      errors.phone = "Please enter your phone number.";
+      isValid = false;
+    }
+
+    if (!email.trim()) {
+      errors.email = "Please enter your email address.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Please enter a valid email address.";
+      isValid = false;
+    }
+
+    if (!message.trim()) {
+      errors.message = "Please enter your message.";
+      isValid = false;
+    }
+    if (isValid === false){
+      errors.validation = "Please revise your inputs.";
+      isValid = false;
+   }
+    setErrors(errors);
+    return isValid;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
     setIsLoading(true);
 
     const data = {
@@ -26,10 +69,10 @@ const Contact = () => {
       message
     };
 
-    axios.post('https://portifolioapi.stonixgraphics.com/', data,{
+    axios.post('https://portifolioapi.stonixgraphics.com/', data, {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept': '*/*'
-  })
+    })
       .then((res) => {
         setResponse(res.data);
         setIsLoading(false);
@@ -38,6 +81,7 @@ const Contact = () => {
         setPhone("");
         setEmail("");
         setMessage("");
+        setErrors({});
       })
       .catch((err) => {
         console.log(err);
@@ -78,12 +122,13 @@ const Contact = () => {
             {socialIcons.map((socialIcon) => {
               return (
                 <a href={socialIcon.link} target="_blank" rel="noreferrer">
-                    {socialIcon.icon}
-                  </a>
+                  {socialIcon.icon}
+                </a>
               )
             })}
           </div>
         </motion.div>
+
         <motion.div
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: [150, 0], opacity: 1 }}
@@ -94,15 +139,24 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <div className="row">
               <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            </div>
+            <div className="row">
               <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+             
             </div>
             <div className="row">
               <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+             
               <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+             
             </div>
             <div className="row">
               <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+              
             </div>
+            
+            
+            
             <motion.button
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
@@ -115,6 +169,11 @@ const Contact = () => {
           {response && (
             <div className={`message ${response.status}`}>
               {response.message}
+            </div>
+          )}
+          {errors.validation && (
+            <div className="error">
+              Please revise your inputs
             </div>
           )}
         </motion.div>
