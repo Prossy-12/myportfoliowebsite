@@ -60,7 +60,7 @@ const Navbar = () => {
                   {socialIcons.map((socialIcon) => {
                   return (
                       <div>
-                          <a href={socialIcon.link}>
+                          <a href={socialIcon.link} target="_blank" rel="noreferrer">
                               {socialIcon.icon}
                           </a>
                           
