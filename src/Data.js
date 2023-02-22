@@ -68,27 +68,15 @@ export const icons = [<SiJavascript />, <FaVuejs />, <SiTypescript />, <FaReact 
 export const experiences = [
   {
     id: 1,
-    year: "2023",
-    position: "Machine Learning Developer",
-    company: "Mindwise Ai"
+    year: "2020-Present",
+    position: "Software Developer",
+    company: "Nugsoft Technologies"
   },
   {
-    di: 2,
-    year: "2022",
+    id: 2,
+    year: "2022-Present",
     position: "Open source Contributor",
     company: "OSCA Africa"
-  },
-  {
-    di: 2,
-    year: "2021",
-    position: "Software Developer",
-    company: "Nugsoft Technologies"
-  },
-  {
-    id: 3,
-    year: "2020",
-    position: "Software Developer",
-    company: "Nugsoft Technologies"
   }
 ]
 export const finishes = [
