@@ -1,4 +1,4 @@
-import {  FaNodeJs, FaReact, FaPhoneAlt, FaUser,FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaTwitter, FaYoutube, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaPhoneAlt, FaUser, FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaTwitter, FaYoutube, FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { SiJavascript, SiTensorflow, SiTypescript } from "react-icons/si";
 import work1 from "./assets/work1.png";
 import work2 from "./assets/work2.png";
@@ -10,35 +10,40 @@ import work6 from "./assets/work6.png";
 export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
 
 export const socialIcons = [
-  { id:1,
+   {
+    id: 1,
+    icon: <FaGithub />,
+    link: "https://github.com/Livingston-k",
+  },
+  { id:2,
     icon: <FaTwitter />,
     link: "https://twitter.com/KadduLivingston",
   },
   {
-    id:2,
-    icon: <FaInstagram />,
-    link: "https://www.instagram.com/kaddulivingstone/",
-  },
-  {
-    id:3,
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/kaddu-livingstone",
-  },
-  {
-    id: 4,
+    id: 3,
     icon: <FaYoutube />,
     link: "https://www.youtube.com/@KadduLivingstone",
   },
   {
-    id:5,
+    id:4,
     icon: <FaFacebook />,
     link: "https://www.facebook.com/kadduLivingstoneofficial",
   },
   {
-    id: 6,
-    icon: <FaGithub />,
-    link: "https://github.com/Livingston-k",
-  }
+    id:5,
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/kaddu-livingstone",
+  },
+   {
+    id:6,
+    icon: <FaInstagram />,
+    link: "https://www.instagram.com/kaddulivingstone/",
+  },
+  {
+    id:7,
+    icon: <FaWhatsapp />,
+    link: "https://api.whatsapp.com/send?phone=256701512709",
+  },
 
 ]
 
@@ -53,7 +58,7 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: "Phone",
-    value: "+(256)701512709"
+    value: "256701512709"
   },
   {
     id: 3,

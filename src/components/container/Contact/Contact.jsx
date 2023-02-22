@@ -26,10 +26,18 @@ const Contact = () => {
       message
     };
 
-    axios.post('https://portifolioapi.stonixgraphics.com/', data)
+    axios.post('https://portifolioapi.stonixgraphics.com/', data,{
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept': '*/*'
+  })
       .then((res) => {
         setResponse(res.data);
         setIsLoading(false);
+        setFirstName("");
+        setLastName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
       })
       .catch((err) => {
         console.log(err);
