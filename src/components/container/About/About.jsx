@@ -1,14 +1,14 @@
-import React from 'react'
-import "./About.scss";
-
+import React from 'react';
 import { motion } from 'framer-motion';
 import { bios } from '../../../Data';
-import portfolio from "../../../assets/portfolio.jpg"
-import cv from "../../../assets/kaddulivingstoncv.pdf"
+import portfolio from "../../../assets/portfolio.jpg";
+import cv from "../../../assets/kaddulivingstoncv.pdf";
+import "./About.scss";
+
 const About = () => {
 
   return (
-    <div className="container " id='about'>
+    <div className="container" id='about'>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
@@ -34,7 +34,7 @@ const About = () => {
           whileInView={{ x: [250, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p>Hi, my name is Kaddu Livingstone and I am a software developer. I have a passion for creating innovative solutions that help people solve complex problems. With 3+ of experience in I.T  Software development, I have honed my skills in Node.js React.js,Vue.js,Tailwindcss,Laravel,Python and Tensorflow</p>
+          <p>Hi, my name is Kaddu Livingstone, and I am an AI Research Engineer. I am passionate about leveraging Artificial Intelligence and Machine Learning to create innovative solutions that solve complex problems. With 3+ years of experience in software development, I specialize in building AI-powered applications using technologies such as Node.js, React.js, Python, TensorFlow, and more.</p>
           {bios.map(bio => {
             return (
               <div className="bio" key={bio.id}>
@@ -54,7 +54,7 @@ const About = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
