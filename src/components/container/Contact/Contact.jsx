@@ -46,10 +46,10 @@ const Contact = () => {
       errors.message = "Please enter your message.";
       isValid = false;
     }
-    if (isValid === false){
+    if (isValid === false) {
       errors.validation = "Please revise your inputs.";
       isValid = false;
-   }
+    }
     setErrors(errors);
     return isValid;
   };
@@ -69,7 +69,7 @@ const Contact = () => {
       message
     };
 
-    axios.post('https://portifolioapi.stonixgraphics.com/', data, {
+    axios.post('https://statepos.com/kadduwebsiteapi/index.php', data, {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept': '*/*'
     })
@@ -106,8 +106,8 @@ const Contact = () => {
           whileInView={{ x: [-150, 0], opacity: 1 }}
           transition={{ duration: 1 }}
           className='contact_left_container'>
-          <h3>Just Say Hi</h3>
-          <p className='contact_text'>I'm always excited to connect with fellow developers, potential clients, and anyone interested in discussing technology. If you have a project idea or just want to chat, please don't hesitate to reach out. I would love to hear from you!</p>
+          <h3>Let's Talk AI</h3>
+          <p className='contact_text'>I'm always excited to connect with fellow AI enthusiasts, researchers, and anyone interested in discussing Artificial Intelligence. Whether you have a project idea, want to collaborate, or just want to chat about AI, feel free to reach out!</p>
           {contacts.map(contact => {
             return (
               <div className='contact_left' key={contact.id}>
@@ -139,24 +139,22 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <div className="row">
               <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+              {errors.firstName && <div className="error">{errors.firstName}</div>}
             </div>
             <div className="row">
               <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-             
+              {errors.lastName && <div className="error">{errors.lastName}</div>}
             </div>
             <div className="row">
               <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
-             
+              {errors.phone && <div className="error">{errors.phone}</div>}
               <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-             
+              {errors.email && <div className="error">{errors.email}</div>}
             </div>
             <div className="row">
               <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-              
+              {errors.message && <div className="error">{errors.message}</div>}
             </div>
-            
-            
-            
             <motion.button
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
@@ -173,7 +171,7 @@ const Contact = () => {
           )}
           {errors.validation && (
             <div className="error">
-              Please revise your inputs
+              {errors.validation}
             </div>
           )}
         </motion.div>
@@ -182,4 +180,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;
