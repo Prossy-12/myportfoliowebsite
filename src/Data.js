@@ -60,18 +60,7 @@ export const bios = [
 export const icons = [<SiJavascript />, <FaVuejs />, <SiTypescript />, <FaReact />, <FaNodeJs />, <FaLaravel />, <FaPython />, <SiTensorflow />]
 
 export const experiences = [
-  {
-    id: 1,
-    year: "2020-Present",
-    position: "Software Developer",
-    company: "Nugsoft Technologies"
-  },
-  {
-    id: 2,
-    year: "2022-Present",
-    position: "Open source Contributor",
-    company: "OSCA Africa"
-  }
+  
 ]
 export const finishes = [
   {
