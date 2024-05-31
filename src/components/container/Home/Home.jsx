@@ -29,8 +29,8 @@ const Home = () => {
       </div>
       <div className="profile_text">
         <h3 className='name'>Hi, I'm <span>Kaddu Livingstone</span></h3>
-        <span className='job'>AI Research Engineer</span>
-        <span className='text'>Passionate about pushing the boundaries of Artificial Intelligence through research and innovation.</span>
+        <span className='job'>CEO Curley AI</span>
+        <span className='text'>Passionate about harnessing the power of AI and machine learning to drive positive change in Various Industries</span>
         <motion.a
           href="#contact"
           whileHover={{ scale: 1.1 }}
@@ -39,17 +39,7 @@ const Home = () => {
         >
           Connect with me
         </motion.a>
-        <div className="expertise">
-          <div className="ai">
-            <span>Machine Learning Research</span>
-          </div>
-          <div className="ml">
-            <span>Deep Learning</span>
-          </div>
-          <div className="software">
-            <span>Software Development</span>
-          </div>
-        </div>
+      
       </div>
     </motion.div>
   );

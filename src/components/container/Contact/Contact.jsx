@@ -107,7 +107,7 @@ const Contact = () => {
           transition={{ duration: 1 }}
           className='contact_left_container'>
           <h3>Let's Talk AI</h3>
-          <p className='contact_text'>I'm always excited to connect with fellow AI enthusiasts, researchers, and anyone interested in discussing Artificial Intelligence. Whether you have a project idea, want to collaborate, or just want to chat about AI, feel free to reach out!</p>
+          <p className='contact_text'>I'm always excited to connect with fellow AI enthusiasts, researchers, and anyone interested in discussing Artificial Intelligence. Whether you have a project idea, want to collaborate, or just want to connect with me, feel free to reach out!</p>
           {contacts.map(contact => {
             return (
               <div className='contact_left' key={contact.id}>

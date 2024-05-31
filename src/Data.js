@@ -7,7 +7,7 @@ import work4 from "./assets/work4.png";
 import work5 from "./assets/work5.png";
 import work6 from "./assets/work6.png";
 
-export const navLinks = ["home", "about", "skills", "portfolio", "contact"]
+export const navLinks = ["home", "about", "contact"]
 
 export const socialIcons = [
    {
@@ -38,12 +38,7 @@ export const socialIcons = [
     id:6,
     icon: <FaInstagram />,
     link: "https://www.instagram.com/kaddulivingstone/",
-  },
-  {
-    id:7,
-    icon: <FaWhatsapp />,
-    link: "https://api.whatsapp.com/send?phone=256701512709",
-  },
+  }
 
 ]
 
@@ -53,12 +48,6 @@ export const bios = [
     icon: <FaUser />,
     key: "Name",
     value: "Kaddu Livingstone"
-  },
-  {
-    id: 2,
-    icon: <FaPhoneAlt />,
-    key: "Phone",
-    value: "256701512709"
   },
   {
     id: 3,
@@ -172,10 +161,5 @@ export const contacts = [
     id: 2,
     icon: <FaPaperPlane />,
     infoText: "kaddulivingston@gmail.com"
-  },
-  {
-    id: 3,
-    icon: <FaPhoneAlt />,
-    infoText: "+256-701512709"
   }
 ]

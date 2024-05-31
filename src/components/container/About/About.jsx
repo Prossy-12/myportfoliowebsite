@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { bios } from '../../../Data';
 import portfolio from "../../../assets/portfolio.jpg";
-import cv from "../../../assets/kaddulivingstoncv.pdf";
 import "./About.scss";
 
 const About = () => {
@@ -34,7 +33,7 @@ const About = () => {
           whileInView={{ x: [250, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p>Hi, my name is Kaddu Livingstone, and I am an AI Research Engineer. I am passionate about leveraging Artificial Intelligence and Machine Learning to create innovative solutions that solve complex problems. With 3+ years of experience in software development, I specialize in building AI-powered applications using technologies such as Node.js, React.js, Python, TensorFlow, and more.</p>
+          <p>I am Kaddu Livingstone, a passionate computer scientist and AI research engineer based in Kampala, Uganda. As the founder and CEO of Curely AI, I am dedicated to leveraging AI and machine learning to revolutionize healthcare, security, transportation,    Agriculture and other business sectors. My expertise lies in developing innovative solutions that drive positive change in these fields. Feel free to connect with me through my social media platforms.</p>
           {bios.map(bio => {
             return (
               <div className="bio" key={bio.id}>
@@ -43,12 +42,7 @@ const About = () => {
               </div>
             )
           })}
-          <motion.a href={cv} download=""
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            Download Resume
-          </motion.a>
+          
         </motion.div>
 
       </div>
