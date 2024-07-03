@@ -106,8 +106,8 @@ const Contact = () => {
           whileInView={{ x: [-150, 0], opacity: 1 }}
           transition={{ duration: 1 }}
           className='contact_left_container'>
-          <h3>Let's Talk AI</h3>
-          <p className='contact_text'>I'm always excited to connect with fellow AI enthusiasts, researchers, and anyone interested in discussing Artificial Intelligence. Whether you have a project idea, want to collaborate, or just want to connect with me, feel free to reach out!</p>
+          <h3>Connect with me </h3>
+          <p className='contact_text'>Feel free to reach out to me for inquiries, collaborations, or just to connect. You can connect with me on social media or send me a message directly using the form.</p>
           {contacts.map(contact => {
             return (
               <div className='contact_left' key={contact.id}>
@@ -135,7 +135,7 @@ const Contact = () => {
           transition={{ duration: 1 }}
           className="contact_right"
         >
-          <h3>Get In Touch</h3>
+          <h3>Send A Message</h3>
           <form onSubmit={handleSubmit}>
             <div className="row">
               <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
