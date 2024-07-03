@@ -29,7 +29,7 @@ const Home = () => {
       </div>
       <div className="profile_text">
         <h3 className='name'>Hi, I'm <span>Kaddu Livingstone</span></h3>
-        <span className='job'>CEO Curley AI</span>
+        <span className='job'>CEO & Founder Curley AI</span>
         <span className='text'>Passionate about harnessing the power of AI and machine learning to drive positive change in Various Industries</span>
         <motion.a
           href="#contact"

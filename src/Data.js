@@ -1,5 +1,5 @@
-import { FaNodeJs, FaReact, FaPhoneAlt, FaUser, FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaTwitter, FaYoutube, FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { SiJavascript, SiTensorflow, SiTypescript } from "react-icons/si";
+import { FaNodeJs, FaReact, FaUser, FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaYoutube, FaFacebook, FaGithub,FaTiktok } from "react-icons/fa";
+import { SiJavascript, SiTensorflow, SiTypescript, SiX } from "react-icons/si";
 import work1 from "./assets/work1.png";
 import work2 from "./assets/work2.png";
 import work3 from "./assets/work3.png";
@@ -16,28 +16,34 @@ export const socialIcons = [
     link: "https://github.com/Livingston-k",
   },
   { id:2,
-    icon: <FaTwitter />,
-    link: "https://twitter.com/KadduLivingston",
+    icon: <SiX />,
+    link: "https://X.com/KadduLivingston",
   },
   {
     id: 3,
-    icon: <FaYoutube />,
-    link: "https://www.youtube.com/@KadduLivingstone",
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/kaddu-livingstone",
   },
   {
     id:4,
     icon: <FaFacebook />,
     link: "https://www.facebook.com/kadduLivingstoneofficial",
   },
-  {
-    id:5,
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/kaddu-livingstone",
-  },
+ 
    {
-    id:6,
+    id:5,
     icon: <FaInstagram />,
     link: "https://www.instagram.com/kaddulivingstone/",
+  },
+  {
+    id: 6,
+    icon: <FaYoutube />,
+    link: "https://www.youtube.com/@KadduLivingstone",
+  },
+  {
+    id: 7,
+    icon: <FaTiktok />,
+    link: "https://www.tiktok.com/@kaddulivingstone/",
   }
 
 ]
