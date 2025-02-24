@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import portfolio1 from "../../../assets/portfolio1.jpg";
+import portfolio1 from "../../../assets/love.jpg";
 import "./Home.scss";
 
 const Home = () => {
@@ -25,12 +25,14 @@ const Home = () => {
       }}
     >
       <div className="profile">
-        <img src={portfolio1} alt="Kaddu Livingstone" />
+        <img src={portfolio1} alt="Proscovia Nalwoga" />
       </div>
       <div className="profile_text">
-        <h3 className='name'>Hi, I'm <span>Kaddu Livingstone</span></h3>
-        <span className='job'>CEO & Founder Curley AI</span>
-        <span className='text'>Passionate about harnessing the power of AI and machine learning to drive positive change in Various Industries</span>
+        <h3 className='name'>Hi, I'm <span>Proscovia Nalwoga</span></h3>
+        <span className='job'></span>
+        <span className='text'> Passionate about backend development and skilled in JavaScript.
+
+</span>
         <motion.a
           href="#contact"
           whileHover={{ scale: 1.1 }}

@@ -13,39 +13,27 @@ export const socialIcons = [
    {
     id: 1,
     icon: <FaGithub />,
-    link: "https://github.com/Livingston-k",
+    link: "https://github.com/Prossy-12",
   },
-  { id:2,
-    icon: <SiX />,
-    link: "https://X.com/KadduLivingston",
-  },
+  
   {
     id: 3,
     icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/kaddu-livingstone",
+    link: "https://www.linkedin.com/in/proscovia-nalwoga-487809313/",
   },
   {
     id:4,
     icon: <FaFacebook />,
-    link: "https://www.facebook.com/kadduLivingstoneofficial",
+    link: "https://www.facebook.com/Prossy Nalwoga/",
   },
  
    {
     id:5,
     icon: <FaInstagram />,
-    link: "https://www.instagram.com/kaddulivingstone/",
+    link: "https://www.instagram.com/pro.ssybea/",
   },
-  {
-    id: 6,
-    icon: <FaYoutube />,
-    link: "https://www.youtube.com/@KadduLivingstone",
-  },
-  {
-    id: 7,
-    icon: <FaTiktok />,
-    link: "https://www.tiktok.com/@kaddulivingstone/",
-  }
-
+  
+  
 ]
 
 export const bios = [
@@ -53,13 +41,13 @@ export const bios = [
     id: 1,
     icon: <FaUser />,
     key: "Name",
-    value: "Kaddu Livingstone"
+    value: "Proscovia Nalwoga"
   },
   {
     id: 3,
     icon: <FaPaperPlane />,
     key: "Email",
-    value: "kaddulivingston@gmail.com"
+    value: "prossynalwoga047@gmail.com"
   }
 ]
 
@@ -128,8 +116,8 @@ export const workImages = [
     img: work6,
     name: "Self Driving care",
     category: "Machine-Learning",
-    link:"https://github.com/Livingston-k/self_driving_car",
-    github:"https://github.com/Livingston-k/self_driving_car"
+    link:"https://github.com/Prossy-12/",
+    github:"https://github.com/Prossy-12/"
   },
    {
     id: 7,
@@ -155,6 +143,6 @@ export const contacts = [
   {
     id: 2,
     icon: <FaPaperPlane />,
-    infoText: "kaddulivingston@gmail.com"
+    infoText: "prossynalwoga047@gmail.com"
   }
 ]

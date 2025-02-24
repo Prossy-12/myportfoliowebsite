@@ -47,7 +47,7 @@ const Navbar = () => {
           className={scroll ? "header active" : "header"}>
           <div className="Nav_container">
               <div className="logo">
-                    <h3>K.L</h3>
+                    <h3>P.N</h3>
               </div>
               <ul
                       className="nav_links"

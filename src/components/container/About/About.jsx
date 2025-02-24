@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { bios } from '../../../Data';
-import portfolio from "../../../assets/portfolio.jpg";
+import portfolio from "../../../assets/lw.jpg";
 import "./About.scss";
 
 const About = () => {
@@ -25,7 +25,7 @@ const About = () => {
           <motion.img src={portfolio}
             whileHover={{ y: -48, x: -55 }}
             transition={{ duration: 0.3 }}
-            alt='Kadddulivingston'
+            alt='Proscovia Nalwoga'
           />
         </motion.div>
         <motion.div className="about_right"
@@ -33,7 +33,11 @@ const About = () => {
           whileInView={{ x: [250, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p>I am Kaddu Livingstone, a passionate computer scientist and AI research engineer based in Kampala, Uganda. As the founder and CEO of Curely AI, I am dedicated to leveraging AI and machine learning to revolutionize healthcare, security, transportation,    Agriculture and other business sectors. My expertise lies in developing innovative solutions that drive positive change in these fields. Feel free to connect with me through my social media platforms.</p>
+          <p>I am Proscovia Nalwoga, I am deeply passionate about backend development, where I enjoy building the server-side logic that powers dynamic applications. The ability to create robust APIs and manage databases excites me, as I love solving complex problems and optimizing performance.
+
+JavaScript, particularly with frameworks like Node.js, allows me to craft efficient and scalable solutions. I thrive on the challenge of integrating different systems and ensuring seamless data flow.
+
+Through my projects, I aim to create meaningful user experiences by delivering reliable and secure applications. I’m continually exploring new technologies and best practices to enhance my skills and contribute to the ever-evolving tech landscape.</p>
           {bios.map(bio => {
             return (
               <div className="bio" key={bio.id}>
