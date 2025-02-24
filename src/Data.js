@@ -1,5 +1,5 @@
-import { FaNodeJs, FaReact, FaUser, FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs, FaYoutube, FaFacebook, FaGithub,FaTiktok } from "react-icons/fa";
-import { SiJavascript, SiTensorflow, SiTypescript, SiX } from "react-icons/si";
+import { FaNodeJs, FaReact, FaUser, FaInstagram, FaMapMarkerAlt, FaPaperPlane, FaLinkedin, FaLaravel, FaPython, FaVuejs,  FaFacebook, FaGithub } from "react-icons/fa";
+import { SiJavascript, SiTensorflow, SiTypescript } from "react-icons/si";
 import work1 from "./assets/work1.png";
 import work2 from "./assets/work2.png";
 import work3 from "./assets/work3.png";
